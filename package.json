@@ -2,6 +2,7 @@
   "name": "next-amplified",
   "version": "0.1.0",
   "private": true,
+  "bin": "./node_modules/.bin",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
