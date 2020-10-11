@@ -1,3 +1,6 @@
 # serverless.yml
 nextjsamplifydemo:
     component: "@sls-next/serverless-component@1.16.0"
+    appUrl:         https://••••••••••.cloudfront.net
+    bucketName:     XXXXXX-XXXXXXX
+    distributionId: XXXXXXXXXXXXXX

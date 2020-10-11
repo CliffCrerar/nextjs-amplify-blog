@@ -6,13 +6,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "deploy": "serverless"
   },
   "dependencies": {
     "@aws-amplify/ui-react": "^0.2.23",
     "aws-amplify": "^3.3.3",
+    "aws-sdk": "^2.771.0",
+    "dotenv": "^8.2.0",
     "next": "9.5.5",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "serverless": "^2.6.0"
   }
 }
