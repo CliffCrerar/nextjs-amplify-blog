@@ -1,25 +1,8 @@
 {
-  "auth": {
-    "nextjsamplifydemo697ce4b6": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
-  },
   "api": {
     "nextjsamplifydemoapi": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 7,
-              "description": "nextjsamplifydemoapikey"
-            }
-          },
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AMAZON_COGNITO_USER_POOLS",
@@ -27,9 +10,26 @@
                 "userPoolId": "authnextjsamplifydemo697ce4b6"
               }
             }
-          ]
+          ],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 7,
+              "description": "nextjsamplifydemoapikey"
+            },
+            "authenticationType": "API_KEY"
+          }
         }
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "nextjsamplifydemo697ce4b6": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
     }
   }
 }
